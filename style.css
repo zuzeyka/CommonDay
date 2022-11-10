@@ -1,0 +1,103 @@
+html
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url("./img/tralik.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+div
+{
+    height: 50%;
+    width: 100%;
+	background-image: none;
+}
+
+.player
+{
+    height: 180px;
+    width: 210px;
+    margin-top: 20%;
+    position: absolute;
+	background-size: cover;
+    transition: margin-left 10s cubic-bezier(0, 0, 1, 1) 0s; 
+    z-index: 0;
+}
+
+.player:hover
+{
+    margin-left: 85%;
+}
+
+.enemy
+{
+    height: 180px;
+    width: 210px;
+    position: absolute;
+	background-size: cover;
+    z-index: 1;
+}
+
+.enemydiv
+{
+    margin-top: 10%;
+    height: 20%;
+    margin-left: 20%;
+    z-index: 1;
+}
+
+.finish
+{
+    height: 180px;
+    width: 210px;
+    background-color: red;
+    position: absolute;
+    transform: translateY(300px);
+    z-index: 1;
+    animation: finishanim 10s infinite linear;
+}
+
+.finishdiv
+{
+    height: 20%; 
+    margin-left: 85%; 
+    z-index: 2;
+}
+
+@keyframes finishanim
+{
+    25%
+    {
+        background-color: yellow;
+    }
+    50%
+    {
+        background-color: blue;
+    }
+    75%
+    {
+        background-color: green;
+    }
+    100%
+    {
+        background-color: red;
+    }
+}
+
+@keyframes enemyanim
+{
+    from
+    {
+        margin-top: 0%;
+    }
+    50%
+    {
+        margin-top: 30%;
+    }
+    to
+    {
+        margin-top: 0%;
+    }
+}
